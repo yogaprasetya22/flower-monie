@@ -6,6 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="player.js"></script>
+    <script>
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '360',
+                width: '640',
+                videoId: 'SctrVF37GAQ',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+    </script>
     <title>Monie</title>
 </head>
 <!--  
@@ -328,6 +343,22 @@
         <span>N</span>
         <span>I</span>
         <span>E</span>
+    </div>
+    <!--Youtube-->
+    <div id="player" style="display: none; visibility: hidden;"></div>
+
+    <!--Player-->
+    <div class="audio-player">
+        <div class="player-controls">
+            <div id="radioIcon"></div>
+            <button id="playAudio">Playyy</button>
+            <div id="seekObjContainer">
+                <div id="seekObj">
+                    <div id="percentage"></div>
+                </div>
+            </div>
+            <p id="currentTime"> 00:00</p>
+        </div>
     </div>
     <script>
         onload = () => {

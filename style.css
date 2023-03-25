@@ -1194,10 +1194,10 @@ body {
 
 
 .loader {
+    position           : absolute;
     display            : none;
     margin-top         : 6rem;
     top                : 0;
-    position           : absolute;
     font-size          : x-large;
     z-index            : 100;
     perspective        : 1000px;
@@ -1276,4 +1276,30 @@ body {
     100% {
         transform: rotateX(360deg);
     }
+}
+
+.audio-player {
+    position     : absolute;
+    z-index      : 100;
+    top          : 0;
+    /* display   : none; */
+    margin-top   : 1.2rem;
+    font-size    : x-large;
+}
+
+#playAudio {
+    color           : #fff;
+    background-color: #00ed64;
+    padding         : 10px;
+    font-size       : large;
+    text-align      : center;
+    border-radius   : 10px;
+}
+
+#currentTime {
+    font-size : large;
+    width     : 100%;
+    text-align: center;
+    padding   : 2px;
+    color     : cyan;
 }
