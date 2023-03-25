@@ -38,6 +38,7 @@ body {
     top      : 50%;
     left     : 50%;
     transform: translate(-50%);
+    color    : white;
 }
 
 .btn {
@@ -69,9 +70,11 @@ body {
 }
 
 .btn:hover .txt-type>.txt {
-    border-right: 0.2rem solid #000;
+    color       : white;
+    border-right: 0.2rem solid #fff;
 }
 
 .txt-type>.txt {
-    border-right: 0.2rem solid #004040;
+    color       : white;
+    border-right: 0.2rem solid #fff;
 }
